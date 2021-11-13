@@ -10,7 +10,7 @@ public class GameOverScript : MonoBehaviour
     public int currentScore;
     public void Start()
     {
-        Debug.Log(PlayerPrefs.GetInt("HighScore"));
+        
         currentScore = ScoreCounter.scoreCounter.scoreValue;
         if (currentScore > ScoreCounter.scoreCounter.highScore)
         {

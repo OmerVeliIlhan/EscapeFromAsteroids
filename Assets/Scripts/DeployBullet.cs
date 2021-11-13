@@ -31,7 +31,7 @@ public class DeployBullet : MonoBehaviour
     private void spawnHealth()
     {
         GameObject b = Instantiate(healthShot) as GameObject;
-        b.transform.position = new Vector2(rightPosition.transform.position.x, screenBounds.y * -0.5f);
+        b.transform.position = new Vector2(Random.Range(leftPosition.transform.position.x, rightPosition.transform.position.x), screenBounds.y * -0.5f);
     }
       
     IEnumerator bulletWave()
@@ -46,12 +46,12 @@ public class DeployBullet : MonoBehaviour
 
     IEnumerator shotHealth()
     {
-        Debug.Log("IEnumerator shotHealth()");
+        
         while (true)
         {
             if(HealthHandler.instance.health < 3)
             {
-                Debug.Log("Health is spawned.");
+                
                 spawnHealth();
             }
             yield return new WaitForSeconds(healthRespawn);
