@@ -20,6 +20,7 @@ public class DamageHandler : MonoBehaviour
     {
         if(unvulnerable <= 0 && collision.CompareTag("Enemy"))
         {
+            FindObjectOfType<AudioManager>().Play("PlayerHit");
             Destroy(collision.gameObject);
             StartCoroutine(DamageEffect());
             unvulnerable = 1;
@@ -28,8 +29,10 @@ public class DamageHandler : MonoBehaviour
         {
             if(HealthHandler.instance.health < 3)
             {
+
                 HealthHandler.instance.health += 1;
                 Destroy(collision.gameObject);
+                FindObjectOfType<AudioManager>().Play("PlayerHealth");
             }
         }
     }
