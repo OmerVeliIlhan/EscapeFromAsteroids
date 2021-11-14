@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class AudioOptionsManager : MonoBehaviour
 {
+    [SerializeField]
+    public Slider musicSlider;
+    [SerializeField]
+    public Slider effectSlider;
     public static float musicVolume { get; set; }
     public static float soundEffectVolume { get; set; }
-
 
     public void OnMusicSliderValue(float value)
     {
@@ -30,5 +34,15 @@ public class AudioOptionsManager : MonoBehaviour
     public void effectSet(float value)
     {
         soundEffectVolume = value;
+    }
+
+    public void musicSliderSet(float value)
+    {
+        musicSlider.value = value;
+    }
+    
+    public void effectSliderSet(float value)
+    {
+        effectSlider.value = value;
     }
 }

@@ -21,7 +21,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
-        foreach(Sound s in sounds)
+        foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -43,6 +43,11 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        FindObjectOfType<AudioOptionsManager>().musicSet(PlayerPrefs.GetFloat("music volume"));
+        FindObjectOfType<AudioOptionsManager>().effectSet(PlayerPrefs.GetFloat("effect volume"));
+        FindObjectOfType<AudioOptionsManager>().musicSliderSet(PlayerPrefs.GetFloat("music volume"));
+        FindObjectOfType<AudioOptionsManager>().effectSliderSet(PlayerPrefs.GetFloat("effect volume"));
+        AudioManager.instance.UpdateMixerVolume();
         Play("Theme");
     }
 

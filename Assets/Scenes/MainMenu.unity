@@ -270,7 +270,7 @@ RectTransform:
   - {fileID: 1315412983}
   - {fileID: 5296573}
   m_Father: {fileID: 1976674765}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1522678813}
+      - m_Target: {fileID: 1837344930}
         m_TargetAssemblyTypeName: AudioOptionsManager, Assembly-CSharp
         m_MethodName: OnEffectSliderValue
         m_Mode: 0
@@ -656,7 +656,7 @@ RectTransform:
   - {fileID: 1973431455}
   - {fileID: 1081963075}
   m_Father: {fileID: 1976674765}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -714,7 +714,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1522678813}
+      - m_Target: {fileID: 1837344930}
         m_TargetAssemblyTypeName: AudioOptionsManager, Assembly-CSharp
         m_MethodName: OnMusicSliderValue
         m_Mode: 0
@@ -1544,7 +1544,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1976674765}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1939,7 +1939,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1976674765}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2145,6 +2145,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 32468251086083823, guid: 190a2fd3f0f9ada469c0ce3b4a140b56, type: 3}
+      propertyPath: musicSlider
+      value: 
+      objectReference: {fileID: 467095712}
+    - target: {fileID: 32468251086083823, guid: 190a2fd3f0f9ada469c0ce3b4a140b56, type: 3}
+      propertyPath: effectSlider
+      value: 
+      objectReference: {fileID: 277945094}
     - target: {fileID: 3083202535762846928, guid: 190a2fd3f0f9ada469c0ce3b4a140b56, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2193,19 +2201,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Manager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 32468251086083823, guid: 190a2fd3f0f9ada469c0ce3b4a140b56, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 190a2fd3f0f9ada469c0ce3b4a140b56, type: 3}
---- !u!114 &1522678813 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 32468251086083823, guid: 190a2fd3f0f9ada469c0ce3b4a140b56, type: 3}
-  m_PrefabInstance: {fileID: 1522678812}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 129b2d6aac037c549a63312b76e47afe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1734618841
 GameObject:
   m_ObjectHideFlags: 0
@@ -2442,6 +2440,7 @@ GameObject:
   - component: {fileID: 1837344929}
   - component: {fileID: 1837344928}
   - component: {fileID: 1837344927}
+  - component: {fileID: 1837344930}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2514,6 +2513,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1837344930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837344926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 129b2d6aac037c549a63312b76e47afe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSlider: {fileID: 467095712}
+  effectSlider: {fileID: 277945094}
 --- !u!1 &1872411765
 GameObject:
   m_ObjectHideFlags: 0
@@ -2656,10 +2669,10 @@ RectTransform:
   m_Children:
   - {fileID: 501935199}
   - {fileID: 2009790790}
-  - {fileID: 467095711}
-  - {fileID: 277945093}
   - {fileID: 988934522}
   - {fileID: 1455855900}
+  - {fileID: 467095711}
+  - {fileID: 277945093}
   m_Father: {fileID: 1283454952}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

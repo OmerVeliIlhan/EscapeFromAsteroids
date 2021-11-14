@@ -9,6 +9,8 @@ public class AudioPanel : MonoBehaviour
     {
         if (audioPanel != null)
         {
+            FindObjectOfType<AudioOptionsManager>().musicSliderSet(PlayerPrefs.GetFloat("music volume"));
+            FindObjectOfType<AudioOptionsManager>().effectSliderSet(PlayerPrefs.GetFloat("effect volume"));
             audioPanel.SetActive(true);
         }
     }
@@ -17,6 +19,7 @@ public class AudioPanel : MonoBehaviour
         if (audioPanel != null)
         {
             audioPanel.SetActive(false);
+            PlayerPrefs.Save();
         }
 
     }
