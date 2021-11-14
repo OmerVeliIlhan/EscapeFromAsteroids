@@ -7,6 +7,8 @@ using System;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
+    [SerializeField] private AudioMixerGroup musicMixerGroup;
+    [SerializeField] private AudioMixerGroup effectMixerGroup;
     public Sound[] sounds;
     // Start is called before the first frame update
     void Awake()
@@ -26,6 +28,16 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+
+            switch (s.audioType)
+            {
+                case Sound.AudioTypes.soundEffect:
+                    s.source.outputAudioMixerGroup = effectMixerGroup;
+                    break;
+                case Sound.AudioTypes.Music:
+                    s.source.outputAudioMixerGroup = musicMixerGroup;
+                    break;
+            }
         }
     }
 
@@ -38,5 +50,11 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
+    }
+
+    public void UpdateMixerVolume()
+    {
+        musicMixerGroup.audioMixer.SetFloat("Music Volume", Mathf.Log10(AudioOptionsManager.musicVolume) * 20);
+        effectMixerGroup.audioMixer.SetFloat("Effect Volume", Mathf.Log10(AudioOptionsManager.soundEffectVolume) * 20);   
     }
 }
