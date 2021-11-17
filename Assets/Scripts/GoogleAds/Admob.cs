@@ -7,7 +7,6 @@ using System;
 public class Admob : MonoBehaviour
 {
     private BannerView bannerView;
-    private string idApp, idBanner;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,11 +36,6 @@ public class Admob : MonoBehaviour
         this.bannerView.OnAdClosed += this.HandleOnAdClosed;
         // Called when the ad click caused the user to leave the application.
        // this.bannerView.OnAdLeavingApplication += this.HandleOnAdLeavingApplication;
-
-
-
-
-
     }
 
     public void HandleOnAdLoaded(object sender, EventArgs args)
