@@ -8,7 +8,7 @@ public class DeployBullet : MonoBehaviour
     public GameObject bulletNine;
     public GameObject bulletHexagon;
     public GameObject healthShot;
-    public float respawnTime = 1.0f;
+    public float respawnTime = 4.0f;
     public float healthRespawn = 5.0f;
     public GameObject leftPosition;
     public GameObject rightPosition;

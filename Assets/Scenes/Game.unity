@@ -575,7 +575,7 @@ MonoBehaviour:
   bulletNine: {fileID: 8854408966401964910, guid: a4641b17916bb3544b5676302645fb43, type: 3}
   bulletHexagon: {fileID: 7457573892856139339, guid: 1c172ec22df681f4f81ea007c7be31ac, type: 3}
   healthShot: {fileID: 1706522144716045641, guid: f17cf40e34617a3448d880df4ddafed2, type: 3}
-  respawnTime: 0.5
+  respawnTime: 2
   healthRespawn: 5
   leftPosition: {fileID: 2089291824}
   rightPosition: {fileID: 871374576}
@@ -845,7 +845,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: -25}
+  m_AnchoredPosition: {x: 0, y: -25}
   m_SizeDelta: {x: -0.00012207, y: 171.9}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &669765710
@@ -1246,7 +1246,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 137.15, y: -72.082}
+  m_AnchoredPosition: {x: 137.15002, y: -72.082}
   m_SizeDelta: {x: 274.3, y: 116.8}
   m_Pivot: {x: 0.5, y: 0.6187349}
 --- !u!114 &2100835042
@@ -1306,6 +1306,7 @@ MonoBehaviour:
   gameOverScript: {fileID: 0}
   scoreValue: 0
   highScore: 0
+  makeitHarder: 0
 --- !u!1001 &3083202535437961866
 PrefabInstance:
   m_ObjectHideFlags: 0
