@@ -20,7 +20,7 @@ public class ScoreCounter : MonoBehaviour
         highScore = PlayerPrefs.GetInt("HighScore");
         scoreCounter = this;
         score = GetComponent<Text>();
-        makeitHarder = scoreValue + 600;
+        makeitHarder = scoreValue + 200;
     }
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class ScoreCounter : MonoBehaviour
         if(makeitHarder == scoreValue && FindObjectOfType<DeployBullet>().respawnTime > 0.6f)
         {
             FindObjectOfType<DeployBullet>().respawnTime -= 0.1f;
-            makeitHarder = scoreValue + 600;
+            makeitHarder = scoreValue + 200;
         }
 
     }

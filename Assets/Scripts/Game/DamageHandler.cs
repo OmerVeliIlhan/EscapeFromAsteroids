@@ -25,7 +25,7 @@ public class DamageHandler : MonoBehaviour
             StartCoroutine(DamageEffect());
             unvulnerable = 1;
         }
-        else
+        else if(collision.CompareTag("Health"))
         {
             if(HealthHandler.instance.health < 3)
             {
