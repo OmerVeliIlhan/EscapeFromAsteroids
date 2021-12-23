@@ -2393,7 +2393,6 @@ GameObject:
   - component: {fileID: 1837344928}
   - component: {fileID: 1837344927}
   - component: {fileID: 1837344930}
-  - component: {fileID: 1837344931}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2480,22 +2479,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSlider: {fileID: 467095712}
   effectSlider: {fileID: 277945094}
---- !u!114 &1837344931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837344926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e42e9a3db0beaa4f9e50b1088f94b5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wireColor: {r: 1, g: 1, b: 1, a: 1}
-  UnitsSize: 19
-  constraint: 1
-  camera: {fileID: 1837344928}
 --- !u!1 &1872411765
 GameObject:
   m_ObjectHideFlags: 0
