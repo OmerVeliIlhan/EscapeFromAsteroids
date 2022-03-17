@@ -7,7 +7,6 @@ using System;
 public class Admob : MonoBehaviour
 {
     private BannerView bannerView;
-    // Start is called before the first frame update
     void Start()
     {
         RequestBanner();
