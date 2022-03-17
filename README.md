@@ -1,2 +1,2 @@
 # EscapeFromAsteroids
-A hyper casual game.
+A 2d hyper casual game made in unity.
